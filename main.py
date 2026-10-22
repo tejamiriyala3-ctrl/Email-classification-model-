@@ -4,8 +4,8 @@ import streamlit as st
 import joblib 
 
 st.header('email spam detection model ')
-model = joblib.load(r'/Users/suryamiriyala/Desktop/email classification using streamlit /spam_ham_model.pkl')
-vectroizer = joblib.load(r'/Users/suryamiriyala/Desktop/email classification using streamlit /vectorizer1.pkl')
+model = joblib.load('spam_ham_model.pkl')
+vectroizer = joblib.load('vectorizer1.pkl')
 email=st.text_input('enter ythe email content here ')
 if st.button('predict'):
     if email.strip()=="":
